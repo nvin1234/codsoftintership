@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="calculator">
-        <input type="text" id="result" disabled>
-        <table>
-            <tr>
-                <td><button class="num-btn" value="7">7</button></td>
-                <td><button class="num-btn" value="8">8</button></td>
-                <td><button class="num-btn" value="9">9</button></td>
-                <td><button class="operator" value="/">/</button></td>
-            </tr>
-            <tr>
-                <td><button class="num-btn" value="4">4</button></td>
-                <td><button class="num-btn" value="5">5</button></td>
-                <td><button class="num-btn" value="6">6</button></td>
-                <td><button class="operator" value="*">*</button></td>
-            </tr>
-            <tr>
-                <td><button class="num-btn" value="1">1</button></td>
-                <td><button class="num-btn" value="2">2</button></td>
-                <td><button class="num-btn" value="3">3</button></td>
-                <td><button class="operator" value="-">-</button></td>
-            </tr>
-            <tr>
-                <td><button class="clear" value="clear">C</button></td>
-                <td><button class="num-btn" value="0">0</button></td>
-                <td><button class="decimal" value=".">.</button></td>
-                <td><button class="operator" value="+">+</button></td>
-            </tr>
-            <tr>
-                <td colspan="4"><button class="equal" value="=">=</button></td>
-            </tr>
-        </table>
+    <div class="heading">
+        <h1>Calculator</h1>
     </div>
-    <script src="script.js"></script>
+    
+    <div class="calculator">
+        <input type="text" id="output" readonly>
+        <br>
+        <button onclick="backspace()">←</button>
+        <button onclick="clearOutput()">C</button>
+        <button onclick="calculatePercentage()">%</button>
+        <button onclick="appendToOutput('/')">/</button>
+        <br>
+        <button onclick="appendToOutput('7')">7</button>
+        <button onclick="appendToOutput('8')">8</button>
+        <button onclick="appendToOutput('9')">9</button>
+        <button onclick="appendToOutput('*')">*</button>
+        <br>
+        <button onclick="appendToOutput('4')">4</button>
+        <button onclick="appendToOutput('5')">5</button>
+        <button onclick="appendToOutput('6')">6</button>
+        <button onclick="appendToOutput('-')">-</button>
+        <br>
+        <button onclick="appendToOutput('1')">1</button>
+        <button onclick="appendToOutput('2')">2</button>
+        <button onclick="appendToOutput('3')">3</button>
+        <button onclick="appendToOutput('+')">+</button>
+        <br>
+        <button onclick="appendToOutput('.')">.</button>
+        <button onclick="appendToOutput('0')">0</button>
+        <button onclick="calculateResult()">=</button>
+    </div>
+    
+<script src="script.js"></script>
 </body>
 </html>
